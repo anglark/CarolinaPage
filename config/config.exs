@@ -22,6 +22,14 @@ config :carolina_page, CarolinaPageWeb.Endpoint,
   pubsub_server: CarolinaPage.PubSub,
   live_view: [signing_salt: "HdJZP8gT"]
 
+config :carolina_page, CarolinaPage.Repo,
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  database: "carolina_page_dev",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # Configure the mailer
 #
 # By default it uses the "Local" adapter which stores the emails
